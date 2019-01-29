@@ -10,8 +10,8 @@ module Rubber
         if env.cloud_providers && env.cloud_providers.aws
           storage_credentials = {
               :provider => 'AWS',
-              :aws_access_key_id => env.cloud_providers.aws.access_key,
-              :aws_secret_access_key => env.cloud_providers.aws.secret_access_key,
+              :aws_access_key_id => env.cloud_providers.aws.access_key_s3,
+              :aws_secret_access_key => env.cloud_providers.aws.secret_access_key_s3,
               :path_style => true
           }
           storage_credentials[:region] = env.cloud_providers.aws.region
